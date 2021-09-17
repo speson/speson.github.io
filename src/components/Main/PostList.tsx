@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import styled from "@emotion/styled";
 import PostItem from "components/Main/PostItem";
 import { FluidObject } from "gatsby-image";
+import useInfiniteScroll, { useInfiniteScrollType } from "hooks/useInfiniteScroll";
 
 // const POST_ITEM_DATA = {
 //   title: "Post Item Title",
@@ -17,6 +18,9 @@ import { FluidObject } from "gatsby-image";
 export type PostType = {
   node: {
     id: string;
+    fields: {
+      slug: string;
+    }
     frontmatter: {
       title: string;
       summary: string;
@@ -32,6 +36,7 @@ export type PostType = {
 };
 
 interface PostListProps {
+  selectedCategory: string;
   posts: PostType[];
 }
 
@@ -50,13 +55,21 @@ const PostListWrapper = styled.div`
   }
 `;
 
-const PostList: FunctionComponent<PostListProps> = function ({ posts }) {
+const PostList: FunctionComponent<PostListProps> = function ({ 
+  selectedCategory,
+  posts
+ }) {
+   const { containRef, postList }: useInfiniteScrollType = useInfiniteScroll(
+     selectedCategory,
+     posts,
+   )
+
   return (
-    <PostListWrapper>
-      {posts.map(({ node: { id, frontmatter } }: PostType) => (
+    <PostListWrapper ref={containRef}>
+      {postList.map(({ node: { id, fields: { slug }, frontmatter } }: PostType) => (
         <PostItem
           {...frontmatter}
-          link="<https://www.google.co.kr/>"
+          link={slug}
           key={id}
         />
       ))}

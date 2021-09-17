@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: http://my-website-link.com/sitemap/sitemap-index.xml
+Host: my-website-link.com
