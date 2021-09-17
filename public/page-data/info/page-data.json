@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-info-tsx",
     "path": "/info/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"개발블로그 by speson","description":"개인 개발 블로그 및 프로필 사이트입니다.","author":"speson"}}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Tom-Blog","description":"개인 개발 블로그 및 프로필 사이트입니다.","author":"Tom"}}},"pageContext":{}},
     "staticQueryHashes": []}

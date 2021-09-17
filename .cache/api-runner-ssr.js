@@ -5,7 +5,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-canonical-urls',
       plugin: require('/Users/speson/Workspace/spelog/node_modules/gatsby-plugin-canonical-urls/gatsby-ssr'),
-      options: {"plugins":[],"siteUrl":"https://my-website.com/","stripQueryString":true},
+      options: {"plugins":[],"siteUrl":"https://speson.github.io/","stripQueryString":true},
     },{
       name: 'gatsby-plugin-sitemap',
       plugin: require('/Users/speson/Workspace/spelog/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),

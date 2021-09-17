@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `개발블로그 by speson`,
+    title: `Tom-Blog`,
     description: `개인 개발 블로그 및 프로필 사이트입니다.`,
-    author: `speson`,
-    siteUrl: `http://my-website-link.com`,
+    author: `Tom`,
+    siteUrl: `https://speson.github.io/`,
   },
   plugins: [
     {
@@ -69,7 +69,7 @@ module.exports = {
           {
             resolve: "gatsby-plugin-canonical-urls",
             options: {
-              siteUrl: "https://my-website.com/",
+              siteUrl: "https://speson.github.io/",
               stripQueryString: true,
             },
           },
